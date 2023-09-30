@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Direct Recursion</title>
+    <script>
+        let totalMoney=100;
+        let totalApple=0;
+        function apple(x){
+            if(x>0){
+                console.warn("Our money ",x,"total apple ",totalApple);
+                money(x);  
+            }else{
+                console.warn("We don't have more money and total apple ",totalApple);
+            }
+        }
+        function money(x){
+            totalApple++;
+            apple(x-20);
+        }
+        apple(totalMoney);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
